@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:paddingHorizontal="@dimen/ta_margin_normal"
+    android:paddingTop="@dimen/ta_margin_normal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivImage"
+        style="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="@dimen/ta_margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        style="@style/News.Widget.TextView.GreyColor.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ta_margin_medium"
+        android:layout_marginEnd="@dimen/ta_margin_normal"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@id/ivArrowLeft"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Jhon Doe" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDescription"
+        style="@style/News.Widget.TextView.BlackColor.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ta_margin_medium"
+        android:layout_marginTop="@dimen/ta_margin_small"
+        android:layout_marginEnd="@dimen/ta_margin_normal"
+        app:layout_constraintEnd_toStartOf="@id/ivArrowLeft"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivImage"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="Score" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivArrowLeft"
+        style="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ta_margin_extra_small"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCalender"
+        style="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ta_margin_medium"
+        android:layout_marginTop="@dimen/ta_margin_small"
+        android:layout_marginEnd="@dimen/ta_margin_extra_small"
+        android:src="@drawable/ic_date"
+        app:layout_constraintStart_toEndOf="@id/ivImage"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        style="@style/News.Widget.TextView.BlackColor.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ta_margin_small"
+        app:layout_constraintEnd_toStartOf="@id/ivArrowLeft"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivCalender"
+        app:layout_constraintTop_toTopOf="@id/ivCalender"
+        app:layout_constraintBottom_toBottomOf="@id/ivCalender"
+        tools:text="Score" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/ta_margin_medium"
+        android:alpha="0.5"
+        android:background="@color/taGrey"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImage"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

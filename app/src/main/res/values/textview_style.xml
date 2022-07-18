@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="News.Widget.TextView.Black" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/News.TextAppearance.TextView</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/taBlackColor</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="News.TextAppearance.TextView" parent="">
+        <item name="fontFamily">@font/ta_roboto_regular</item>
+        <item name="font">@font/ta_roboto_regular</item>
+        <item name="android:fontFamily">@font/ta_roboto_regular</item>
+        <item name="android:font" tools:targetApi="o">@font/ta_roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="News.Widget.TextView.Grey" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/News.TextAppearance.TextView</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/taGreyTextColor</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+
+    <style name="News.Widget.TextView.BlackColor.XLarge" parent="News.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ta_text_size_h3</item>
+    </style>
+
+    <style name="News.Widget.TextView.BlackColor.Large" parent="News.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ta_text_size_h5</item>
+    </style>
+
+    <style name="News.Widget.TextView.BlackColor.Medium" parent="News.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ta_text_size_h6</item>
+    </style>
+
+    <style name="News.Widget.TextView.BlackColor.Small" parent="News.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ta_text_size_h7</item>
+    </style>
+
+    <style name="News.Widget.TextView.BlackColor.XSmall" parent="News.Widget.TextView.Black">
+        <item name="android:textSize">@dimen/ta_text_size_h8</item>
+    </style>
+
+
+    <style name="News.Widget.TextView.GreyColor.XLarge" parent="News.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ta_text_size_h3</item>
+    </style>
+
+    <style name="News.Widget.TextView.GreyColor.Large" parent="News.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ta_text_size_h5</item>
+    </style>
+
+    <style name="News.TextView.GreyColor.Medium" parent="News.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ta_text_size_h6</item>
+    </style>
+
+    <style name="News.Widget.TextView.GreyColor.Small" parent="News.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ta_text_size_h7</item>
+    </style>
+
+    <style name="News.Widget.TextView.GreyColor.XSmall" parent="News.Widget.TextView.Grey">
+        <item name="android:textSize">@dimen/ta_text_size_h8</item>
+    </style>
+</resources>

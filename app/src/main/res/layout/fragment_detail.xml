@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.task.news.utils.uikit.toolbarview.ToolBarView
+        android:id="@+id/tbView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tbBottomLineVisibility="true"
+        app:tbStartIconDrawable="@drawable/ta_ic_back_arrow_left"
+        app:tbStartIconVisibility="true"
+        app:tbTitleText="@string/screen_detail_display_text_tb_title" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbView">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="@dimen/ta_margin_normal"
+                    android:layout_marginTop="@dimen/ta_margin_normal"
+                    android:layout_marginEnd="@dimen/ta_margin_normal"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/taBlack"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/News.Widget.TextView.BlackColor.XLarge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/ta_margin_normal"
+                    android:layout_marginTop="@dimen/ta_margin_small"
+                    android:gravity="start"
+                    android:lineSpacingExtra="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivImage"
+                    tools:text="Test ThermoState" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDescription"
+                    style="@style/News.Widget.TextView.BlackColor.Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_margin_small"
+                    android:gravity="start"
+                    android:lineSpacingExtra="1dp"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    tools:text="This is the detail page" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAuthor"
+                    style="@style/News.Widget.TextView.BlackColor.Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_margin_small"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription"
+                    tools:text="Score" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivCalender"
+                    style="@style/shapeAppearance.App.CircleImageView.MediumComponent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_margin_small"
+                    android:layout_marginEnd="@dimen/ta_margin_extra_small"
+                    android:src="@drawable/ic_date"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDate"
+                    style="@style/News.Widget.TextView.BlackColor.Small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ta_margin_small"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCalender"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@id/ivCalender"
+                    app:layout_constraintTop_toTopOf="@id/ivCalender"
+                    tools:text="Score" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
