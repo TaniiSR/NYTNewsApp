@@ -30,6 +30,6 @@ Data Layer contains remote and local data repositories. In this project there is
 
 Domain layer contains Data Repository which handle the logic get the data from local or repository according to certain business rules. In this project no loacal repository involved so it handles only remote data. Here you can add Domain DTO's and mappers. But the current scope I don’t feel this to add separate domain DTO's to just mainatin the layer that's Why i'm using only initial DTO's coming from Data layer. 
 
-# Basically in Domain Layer we Add USE CASES according to Clean Architecture Documentation but I'm using Repository pattern so that's why I don’t feel to introduce USE CASES in Domain Layer.#
+## Basically in Domain Layer we Add USE CASES according to Clean Architecture Documentation but I'm using Repository pattern so that's why I don’t feel to introduce USE CASES in Domain Layer. ##
 
 Presentation layer contains the UI and ViewModels. 
