@@ -20,11 +20,9 @@ abstract class BaseTestCase {
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
-    protected val mockWebServer = MockWebServer()
-
     @After
     fun tearDown() {
-        mockWebServer.shutdown()
+
     }
 
 }

@@ -27,7 +27,7 @@ class HomeVM @Inject constructor(
     private val _articleLists: MutableLiveData<List<Article>> = MutableLiveData()
     override val articleList: LiveData<List<Article>> = _articleLists
 
-    private val _searchLists: MutableLiveData<List<Article>> = MutableLiveData()
+    private val originalArticle: MutableList<Article> = mutableListOf()
 
     private val _isArticleApiSuccess: MutableLiveData<Boolean> = MutableLiveData()
     override val isArticleApiSuccess: LiveData<Boolean> = _isArticleApiSuccess
@@ -45,7 +45,7 @@ class HomeVM @Inject constructor(
                 when (response) {
                     is ApiResponse.Success -> {
                         _articleLists.value = response.data.results ?: listOf()
-                        _searchLists.value = response.data.results ?: listOf()
+                        originalArticle.addAll(response.data.results ?: listOf())
                         _isArticleApiSuccess.value = true
                         _uiState.value = UIEvent.Success
                     }
@@ -58,21 +58,22 @@ class HomeVM @Inject constructor(
             }
         }
     }
+
     override val watcher: TextWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) = Unit
         override fun afterTextChanged(s: Editable?) {
             if (!s.isNullOrEmpty()) {
-                _articleLists.value = _searchLists.value?.filter { article ->
+                _articleLists.value = originalArticle.filter { article ->
                     article.title?.contains(s.toString()) ?: false
                 }
             } else {
-               clearList()
+                clearList()
             }
         }
     }
 
     override fun clearList() {
-        _articleLists.value = _searchLists.value
+        _articleLists.value = originalArticle
     }
 }
